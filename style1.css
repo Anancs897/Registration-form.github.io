@@ -1,0 +1,125 @@
+body{
+    box-sizing: border-box;
+}
+
+.container{
+    border: 1px solid black;
+    background-image: linear-gradient(to right, #3931af, #00c6ff);
+    display: grid;
+    grid-template-columns: 20% 78%;
+    max-width: 900px;
+}
+
+.side1{
+   
+    color: white;
+    display: relative;
+    text-align: center;
+    margin: auto;
+}
+.side2{
+    border: 1px solid black;
+    background-color: white;
+    margin: 20px 10px 20px 10px;
+    border-top-left-radius: 14% 80%;
+    border-bottom-left-radius: 14% 80%;
+
+
+}
+
+.my-grid-form{
+    display: grid;
+    grid-template-columns:  35% 35%;
+    justify-content: center;
+    gap: 20px;
+}
+.inputs{
+    max-width: 300px;
+    /* max-width: 20vw; */
+}
+
+
+
+h3{
+    text-align: center;
+    margin:20px 0 30px 0
+}
+#my-gender{
+    width: 70%;
+    /* margin-left: 91px; */
+}
+#register
+{
+    position: relative;
+}
+.register-butn{
+    position: absolute;
+    right: 33px;
+    bottom: -25px;
+    padding: 8px 25px 8px 25px;
+    border-radius: 19px;
+    background-color:#63bbf2;
+    border: none;
+}
+.login{
+    color: black;
+    border: 1px solid black;
+    padding: 8px 25px 8px 25px;
+    border-radius: 19px;
+}
+h4{
+    margin-bottom:104px;
+}
+
+@media screen and (max-width:924px) {
+    .container{
+        display: block;
+        margin: 10px 30px 0 10px;
+        
+    }
+    .side1{
+       
+        text-align: center;
+    }
+  h4{
+    font-size: 30px;
+    margin: 10px 30% 40px 30%;
+  }
+  .login{
+    margin-bottom: 40px;
+  }
+    
+}
+@media screen and (max-width:640px) {
+    /* .container{
+        display: block;
+        margin: 10px 30px 0 10px;
+        
+    } */
+    .side1{
+       
+        text-align: center;
+    }
+  /* h4{
+    font-size: 30px;
+    margin: 10px 30% 40px 30%;
+  }
+  .login{
+    margin-bottom: 40px;
+  } */
+
+  .my-grid-form{
+    display: block;
+    text-align: center;
+    
+  }
+  .inputs{
+    width: 100%;
+    margin:auto;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+
