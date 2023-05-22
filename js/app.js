@@ -197,16 +197,16 @@ const answer=document.getElementById('my-answer');
     const myLocalData=JSON.parse(localStorage.getItem("FormData"));
     // console.log(myLocalData);
         
-        const table1=document.createElement('table');
-        // table1.classList.add('table');
-        table1.classList.add('table-bordered');
+        const table=document.createElement('table');
+        // table.classList.add('table');
+        table.classList.add('my-table');
         
 
 
 
         const keysArray=Object.keys(myLocalData);
-        const toptr1=document.createElement('tr');
-        const thead1=document.createElement('thead');
+        const tr=document.createElement('tr')
+        const thead=document.createElement('thead');
         
 
 
@@ -215,62 +215,78 @@ const answer=document.getElementById('my-answer');
         for(var i=0;i<keysArray.length/2;i++)
         {
             const th=document.createElement('th');
+            th.classList.add('table-props');
             // th.setAttribute('scope','col');
-            th.style.width="20%";
+            // th.style.width="20%";
             th.appendChild(document.createTextNode(`${keysArray[i]}`));
 
             // th.classList.add('my-th');
             
-            toptr1.appendChild(th);
+            tr.appendChild(th);
         }
-        thead1.appendChild(toptr1);
-        table1.appendChild(thead1);
+        thead.appendChild(tr);
+        table.appendChild(thead);
        
         
 
         const valuesArray = Object.values(myLocalData);
-        const row1=document.createElement('tr');
-        row1.style.width="20%";
-        const tbody1=document.createElement('tbody');
+        const row=document.createElement('tr');
+        // row1.style.width="20%";
+        const tbody=document.createElement('tbody');
+
         for(var i=0;i<valuesArray.length/2;i++)
         {
-            const col1=document.createElement('td');
-            col1.appendChild(document.createTextNode(`${valuesArray[i]}`));
-            row1.appendChild(col1);
+            const col=document.createElement('td');
+            col.appendChild(document.createTextNode(`${valuesArray[i]}`));
+            col.classList.add('table-props');
+            row.appendChild(col);
         }
-        tbody1.appendChild(row1)
-        table1.appendChild(tbody1);
+        tbody.appendChild(row)
+        table.appendChild(tbody);
 
-        document.querySelector('#table-parent').appendChild(table1);
+        // document.querySelector('#table-parent').appendChild(table);
+
+
+
+        //  document.querySelector('#table-parent').appendChild(table);
+         document.body.appendChild(table);
+
+        // table.classList.add('table-properties');
+
 
 // parttiton
 
 
 
 
-        const table2=document.createElement('table');
-        // table2.classList.add('table');
-        table2.classList.add('table-bordered');
-        const toptr2=document.createElement('tr');
-        toptr2.style.width="20%"
-        const thead2=document.createElement('thead');
+        // const table=document.createElement('table');
+        // // table.classList.add('table');
+        // table.classList.add('table-bordered');
+        // const tr=document.createElement('tr');
+        // tr.style.width="20%"
+        // const thead=document.createElement('thead');
         
+        
+        // document.querySelector('#table-parent').appendChild(table);
+
+        // table.classList.add('table-properties');
+        // table.classList.add('table-properties');
 
 
 
 
-        for(var i=keysArray.length/2;i<keysArray.length;i++)
-        {
-            const th=document.createElement('th');
-            th.style.width="20%";
-            // th.setAttribute('scope','col');
-            th.appendChild(document.createTextNode(`${keysArray[i]}`));
-            // th.classList.add('my-th');
+        // for(var i=keysArray.length/2;i<keysArray.length;i++)
+        // {
+        //     const th=document.createElement('th');
+        //     th.style.width="20%";
+        //     // th.setAttribute('scope','col');
+        //     th.appendChild(document.createTextNode(`${keysArray[i]}`));
+        //     // th.classList.add('my-th');
             
-            toptr2.appendChild(th);
-        }
-        thead2.appendChild(toptr2);
-        table2.appendChild(thead2);
+        //     tr.appendChild(th);
+        // }
+        // thead.appendChild(tr);
+        // table.appendChild(thead);
 
 
 
@@ -281,23 +297,23 @@ const answer=document.getElementById('my-answer');
 
 
 
-        const row2=document.createElement('tr');
-        row2.style.width="25%";
-        const tbody2=document.createElement('tbody');
-        for(var i=valuesArray.length/2;i<valuesArray.length;i++)
-        {
-            const col=document.createElement('td');
-            col.style.width="25%";
-            col.appendChild(document.createTextNode(`${valuesArray[i]}`));
-            row2.appendChild(col);
-        }
-        tbody2.appendChild(row2);
-        table2.appendChild(tbody2);
+        // const row2=document.createElement('tr');
+        // row2.style.width="25%";
+        // const tbody2=document.createElement('tbody');
+        // for(var i=valuesArray.length/2;i<valuesArray.length;i++)
+        // {
+        //     const col=document.createElement('td');
+        //     col.style.width="25%";
+        //     col.appendChild(document.createTextNode(`${valuesArray[i]}`));
+        //     row2.appendChild(col);
+        // }
+        // tbody2.appendChild(row2);
+        // table.appendChild(tbody2);
 
-        document.querySelector('#table-parent').appendChild(table2);
+        // document.querySelector('#table-parent').appendChild(table);
 
-        table1.classList.add('table-properties');
-        table2.classList.add('table-properties');
+        // table.classList.add('table-properties');
+        // table.classList.add('table-properties');
 
         
 

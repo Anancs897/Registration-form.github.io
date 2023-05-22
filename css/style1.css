@@ -100,11 +100,19 @@ td,th{
   border-collapse: collapse;
 }
 
-
-
-#table-parent{
-  margin-right: 20px;
+.my-table{
+  margin:auto;
+  margin-bottom: 30px;
+  margin-top: 25px;
+  width: 100%;
+  /* overflow-x: auto; */
 }
+
+.table-props{
+  overflow: auto;
+}
+
+
 
 
  @media screen and (max-width:992px) {
@@ -117,8 +125,10 @@ td,th{
       border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     }
-    .table-properties{
-      font: 8px;
+
+    .table-props{
+      font-size:small;
+      padding: 1px;
     }
    
    }
