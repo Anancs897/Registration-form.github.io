@@ -6,103 +6,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="css/style1.css">
 </head>
 <body>
 
-    <div class="container    mt-5 ">
-        <div class="side1">
+    <div class="container mt-5 outer">
+        <div class="row">
+
+        
+        <div class="col-lg-2    side1  my-col">
             <h4>Welcome to Gemini Solutions</h4>
             <button type="button" class="btn btn-light  login">Login</button>
         </div>
 
-        <!-- <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div> -->
+        <div class="col-lg-9  side2  my-col">
 
-
-
-        <div class="side2">
-
-            <h3 mt-4>Apply as a Employee</h3>
-            <div class="form input    mb-5">
-                <form action=""  class="my-grid-form"   onsubmit="return myValidations()" >
-
-                    <div class="my-grid1">
-
-                        <p class="inputs">
-                    <input type="text" class="form-control" placeholder="First Name *" aria-label="Username" aria-describedby="basic-addon1"  id="first-name" required  name="first-name">
-                </p>
-                    <p class="inputs">
-                    <input type="text" class="form-control" placeholder="Last Name *" aria-label="Username" aria-describedby="basic-addon1" id="last-name"  required  name="last-name" >
-                </p>
-
-                    <p class="inputs">
-
-                    <input type="password" class="form-control" placeholder="Password *" aria-label="Username" aria-describedby="basic-addon1"  required id="original-pw" name="original-pw">
-                </p>
-                    <p class="inputs">
-                    <input type="password" class="form-control" placeholder="Confirm Password *" aria-label="Username" aria-describedby="basic-addon1" required   id="confirm-pw" name="confirm-pw">
-                </p>
-                </div>
-
-                <div class="my-grid2">
-                    <p class="inputs">
-                    <input type="email" class="form-control" placeholder="Your Email *" aria-label="Username" aria-describedby="basic-addon1"  id="myemail" name="myemail">
-                </p>
-                    <p class="inputs">
-                    <input type="text" class="form-control" placeholder="Your Phone *" aria-label="Username" aria-describedby="basic-addon1"   id="my-phone" name="my-phone" >
-                </p>
-                    <p class="inputs">
-
-                    <select class="form-control" aria-label="Default select example" required >
-                        <option selected disabled>Please select your Security Question</option>
-                        <option value="1">My nickname</option>
-                        <option value="2">My favourite dish</option>
-                        <option value="3">My favourite car</option>
-                      </select>
-                    </p>
-
-                      <p class="inputs">
-                    <input type="text" class="form-control" placeholder="Enter Your Answer *" aria-label="Username" aria-describedby="basic-addon1" required>
-                </p>
-                </div>
-
-                <!-- </form> -->
-
-                <p id="my-gender"  >
-                    <input class="form-control-input" type="radio" name="gender" id="male" required>
-                    <label class="form-conrol-label" for="male">
-                     Male
-                    </label>
-                    <input class="form-control-input" type="radio" name="gender" id="female" required>
-                    <label class="form-conrol-label" for="female">
-                     Female
-                    </label>
-                </p>
-
-                <p id="register">
-                    <!-- <input type="submit" class="btn btn-primary register-butn" value="Register"> -->
-                    <!-- <input type="submit" value="Register"  class="register-butn"> -->
-                    <button type="submit"  class="register-butn btn btn-primary" >Register</button>
-                </p>
-                </form>
+         
+            <div class="col-12">
+                <h3>Apply as a Employee</h3>
             </div>
+             
+                <form action="#" id="my-form">
+
+                    <div class="container input-tags-container">
+
+                    <div class="row">
+
+                        <div class="col-sm-6">
+                            <div class="mb-1">
+                                <label for="first-name" class="my-label">First Name</label>
+                                <input type="text" class="form-control" placeholder="First Name*" aria-label="Username" aria-describedby="basic-addon1"   id="first-name"   name="firstName">
+                                <span class="message" id="first-message">
+                            
+                                </span>
+                            </div>
+
+                            <div class="col-xs-2  mb-1">
+                                <label for="last-name" class="my-label">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last Name *" aria-label="Username" aria-describedby="basic-addon1"  id="last-name"    name="lastName">
+                                <span class="message " id="second-message">
+                                   
+                                </span>
+                            </div>
+
+                            <div class="col-xs-2  mb-1">
+                                <label for="original-pw" class="my-label">Password</label>
+                                <input type="password" class="form-control" placeholder="Password *" aria-label="Username" aria-describedby="basic-addon1"   id="original-pw" name="originalPassword">
+                                <span class="message" id="third-message">
+                                    
+                                </span>
+                            </div>
+
+                            <div class="col-xs-2 mb-1">
+                                <label for="confirm-pw" class="my-label">Confirm Password</label>
+                                <input type="password" class="form-control" placeholder="Confirm Password *" aria-label="Username" aria-describedby="basic-addon1" autocomplete="off"   id="confirm-pw" name="confirmPassword">
+                                <span class="message"  id="fourth-message" >
+                                  
+                                </span>
+                            </div>
+
+
+
+                        </div>
+                        <div class="col-sm-6">
+                            
+                            <div class="col-xs-2 mb-1 ">
+                                <label for="myemail" class="my-label">Email</label>
+                                <input type="email" class="form-control" placeholder="Your Email *" aria-label="Username" aria-describedby="basic-addon1"   id="myemail" name="myEmail">
+                                <span class="message" id="fifth-message">
+                                 
+                                </span>
+                            </div>
+
+                            <div class="col-xs-2  mb-1">
+                                <label for="my-phone" class="my-label">Phone No.</label>
+                                <input type="number" class="form-control" placeholder="Your Phone *" aria-label="Username" aria-describedby="basic-addon1"    id="my-phone" name="myPhone" >
+                                <span class="message" id="sixth-message">
+                                 
+                                </span>
+                            </div>
+
+                                
+                            <div class="col-xs-2  mb-1">
+                                <label for="security-ques" class="my-label">Security Question</label>
+                                <select class="form-control" id="security-ques" aria-label="Default select example" name="myQues">
+                                    <option selected disabled value="default">Please select your Security Question</option>
+                                    <option value="My nickname">My nickname</option>
+                                    <option value="My favourite dish">My favourite dish</option>
+                                    <option value="My favourite car">My favourite car</option>
+                                  </select>
+                                  <span class="message" id="seventh-message">
+
+                                </span>
+                            </div>
+                            
+                            <div class="col-xs-2  mb-1">
+                                <label for="my-answer" class="my-label">Answer</label>
+
+                                <input type="text" class="form-control" id="my-answer" placeholder="Enter Your Answer *" aria-label="Username" aria-describedby="basic-addon1"autocomplete="off"  name="myAns">
+                                <span class="message" id="eighth-message">
+                               
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                
+                                    <label class="form-conrol-label" for="male" id="gender-label">
+                                        Gender
+                                    </label>
+                                    <br>
+                                
+
+                                <input class="form-control-input" type="radio" name="gender" id="male" value="male" checked >
+                                <label class="form-conrol-label" for="male">
+                                    Male
+                                </label>
+                                 <input class="form-control-input" type="radio" name="gender" id="female" value="female">
+                                 <label class="form-conrol-label" for="female">
+                                    Female
+                                 </label>
+                                 
+                            </div>
+                           
+                            
+                        </div> 
+
+                        <div class="row">
+                            <div class="col-md-11">
+
+                            </div>
+                            <div class="col-lg-1 register-div mb-1">
+                                
+                                    <button type="submit" id="submit-butn" class="register-butn btn btn-primary" >Register</button>
+                            </div>
+                        </div>
+                        
+                </div>              
+                </form>
+            
         </div>
-
-
-
-
+</div>
     </div>
+
+
+<p id="table-parent">
+    
     
 
 
+</p>
 
 
 
-    
-
-
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    <script src="./js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
